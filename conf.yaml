@@ -1,0 +1,85 @@
+TFR:
+  active: five-per-oct-sigma
+
+  sets:
+    five-per-oct-sigma:
+      lowFreq: 27.5
+      resol: 3
+      width: 2
+      sd: 0.011552453009332421 # np.log(2.0)/(12*5)
+      alpha: 1.0
+      verbose: 1
+      multirate: false
+
+Methods:
+  HTFD:
+    params:
+      n_harmonics: 20
+      eps: 1.0e-10
+      seed: 0
+      init_params:
+        decay: 1.0
+        input_normalization: "average"
+      prior_params:
+        alphas_Omega: [100, 100]
+        alpha_U: 1.0e-5
+      constant_params:
+        calc_width: 3.0
+        min_calc_range: 11
+    schedule:
+      - func: fit
+        n_iter: 100
+        update_flags:
+          - true
+          - true
+          - true
+
+  SFHTFD:
+    params:
+      n_harmonics: 20
+      eps: 1.0e-10
+      seed: 0
+      init_params:
+        input_normalization: "average"
+        normalize_ar_coeffs: true
+        filter_degree: 48
+        n_filters: 3
+        use_approx_Nakagami: false
+      prior_params:
+        alpha_U: 1.0e-2
+        n_DAP_iter: 1
+        pole_mag_thresh: 0.99
+      constant_params:
+        calc_width: 3.0
+        min_calc_range: 11
+    schedule:
+      - func: fit
+        n_iter: 100
+        update_flags:
+          - true
+          - true
+          - true
+          - true
+
+  HTFD4Real:
+    params:
+      n_harmonics: 20
+      eps: 1.0e-10
+      seed: 0
+      init_params:
+        decay: 0.3
+        input_normalization: "average"
+      prior_params:
+        alphas_Omega: [100, 100]
+        alpha_U: 1.0e-5
+      constant_params:
+        calc_width: 3.0
+        min_calc_range: 11
+    schedule:
+      - func: fit
+        n_iter: 100
+        update_flags:
+          - true
+          - true
+          - true
+

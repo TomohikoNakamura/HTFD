@@ -1,0 +1,10 @@
+version: "2.4"
+services:
+  htfd:
+    container_name: htfd
+    build: .
+    command: bash
+    volumes: 
+      - "./:/opt/htfd/"
+    runtime: nvidia
+    tty: true
