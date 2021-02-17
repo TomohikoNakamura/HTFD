@@ -57,7 +57,7 @@ We recommend the following Docker-based installation for reproducibility.
 # Examples
 ## Separate synthetic data
 - Download the synthetic dataset and agree the conditions of use from [here](https://docs.google.com/forms/d/e/1FAIpQLSc4lO5FieU6GBT0_z-b9weorHaKn5M0GrcChAmp3P8ibemlYQ/viewform?usp=sf_link). (You can use this dataset **only for academic research projects** and cannot use for any commercial purpose.)
-  - This dataset consists of MIDI-synthesized audio signals of 7 music excerpts. These excerpts were obtained from Classic Music No. 1 to 7 from the RWC music database [2].
+  - This dataset consists of MIDI-synthesized audio signals of 7 music excerpts. These excerpts were obtained from Classic Music No. 1 to 7 from the RWC music database [3].
   
 - Extract the downloaded file to `/path/to/repository/synth_data`.
 - Execute separation and evaluation codes for HTFD and SF-HTFD.
@@ -96,11 +96,13 @@ We recommend the following Docker-based installation for reproducibility.
  doi={10.1109/TASLP.2020.3037487}
 }
 ```
+If you use only the `pyfacwt` module, please cite [2]. This module performs the fast approximate version of the continuous wavelet transform and its inverse transform.
 
 # License
 [MIT License](LICENSE)
 
 # References
-[1] Tomohiko Nakamura and Hirokazu Kameoka, “Harmonic-Temporal Factor Decomposition for Unsupervised Monaural Separation of Harmonic Sounds,” IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 29, pp. 68–82, Nov. 2020.  
-[2] Masataka Goto, "Development of the RWC Music Database," Proceedings of the 18th International Congress on Acoustics, pp.I-553-556, Apr. 2004.
+[1] Tomohiko Nakamura and Hirokazu Kameoka, "Harmonic-Temporal Factor Decomposition for Unsupervised Monaural Separation of Harmonic Sounds," IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 29, pp. 68–82, Nov. 2020.  
+[2] Tomohiko Nakamura and Hirokazu Kameoka, "Fast Signal Reconstruction from Magnitude Spectrogram of Continuous Wavelet Transform Based on Spectrogram Consistency," in Proceedings of the 17th International Conference on Digital Audio Effects, Sep. 2014, pp. 129–135.   
+[3] Masataka Goto, "Development of the RWC Music Database," Proceedings of the 18th International Congress on Acoustics, pp.I-553-556, Apr. 2004.
 
