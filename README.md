@@ -10,10 +10,21 @@ HTFD encompasses the well-known three concepts cultivated in the audio signal pr
 Please see our paper [1] for the details.
 
 # How to run
-**Caution: We check only the GPU implementation. The CPU implementaion is now under construction and not optimized. The CPU implementation may return different results from the GPU version.**
-
 ## Requirements
-We checked that the codes work with the Linux environment:
+- Ubuntu 16.04 and later
+- docker-ce
+- Octave (for SDR computation)
+- Python
+  - cupy
+  - coloredlogs
+  - librosa
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - oct2py
+
+We checked the code with the following computational environment.
+- Ubuntu 16.04
 - TITAN RTX (24GB RAM)
 - docker-ce (Docker version 20.10.3, build 48d30b5)
   - Host's nvidia driver version: 430.6
